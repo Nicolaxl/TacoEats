@@ -1,12 +1,13 @@
 {% extends "basis.html" %}
 
-{% block items %}
+{% block shops %}
 
-<h2> Products </h2>
+<h2> Random shops </h2>
 <ul>
-    {% for p in item_list %}
-    <li>{{p.id}}, {{p.shop_id}}, {{p.name}}, {{p.price}}, {{p.available}}
-        {% endfor %}
+    {% block shop_list %}
+    <li>{{shop_list.name}}
+        {% endblock %}
 </ul>
 
 {% endblock %}
+

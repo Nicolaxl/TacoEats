@@ -1,11 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Items
+from .models import Shops
+import random
+from django import template
 
 def index(request):
-    itemList = Items.objects.all()
+    shopList = random.choice(Shops.objects.all())
 
     return render(
         request,
         'main/index.html',
-        context = {'item_list': itemList})
+        context = {'shop_list': shopList})
