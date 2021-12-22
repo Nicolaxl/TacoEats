@@ -1,0 +1,12 @@
+{% extends "basis.html" %}
+
+{% block items %}
+
+<h2> Products </h2>
+<ul>
+    {% for p in item_list %}
+    <li>{{p.id}}, {{p.shop_id}}, {{p.name}}, {{p.price}}, {{p.available}}
+        {% endfor %}
+</ul>
+
+{% endblock %}
